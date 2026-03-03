@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:www.edwon.tv)",
+      "Bash(chmod +x:*)",
+      "Bash(npm install:*)",
+      "Bash(npx brunch:*)"
+    ]
+  }
+}

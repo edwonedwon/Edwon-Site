@@ -1,0 +1,286 @@
+[
+  {
+    "id": "washington-lottery",
+    "title": "Washington's Lottery Scholarships",
+    "category": "TV Commercial",
+    "year": "2020",
+    "client": "Washington's Lottery",
+    "thumbnail": "assets/projects/washington-lottery.gif",
+    "thumbnailAlt": "Washington's Lottery Scholarships",
+    "description": "To tell the story of a young engineer's career in 30 seconds, I created boards and pitched my vision for this TV spot. After being greenlit, I led a small team through 3D animation and compositing to bring it to life. The commercial aired successfully for multiple years.",
+    "role": "Creative Direction, Animation, Compositing",
+    "media": [
+      {
+        "type": "image",
+        "src": "assets/projects/washington-lottery-concept.jpg",
+        "alt": "Washington's Lottery — Concept Art"
+      }
+    ],
+    "links": [],
+    "credits": [
+      { "role": "Creative Direction, Animation, Compositing", "name": "Edwon" },
+      { "role": "Animation, Compositing", "name": "Brady Anderson" },
+      { "role": "Rendering, Compositing", "name": "Caleb Van Winkle" },
+      { "role": "Production Company", "name": "Loaded Pictures" }
+    ],
+    "tools": "Cinema 4D, After Effects"
+  },
+  {
+    "id": "waba",
+    "title": "Waba",
+    "category": "VR Game",
+    "year": "2016",
+    "client": "Oculus",
+    "thumbnail": "assets/projects/waba-thumb.jpg",
+    "thumbnailAlt": "Waba VR Game",
+    "description": "Waba is a virtual pet for VR, commissioned by Oculus. What began as a physics toy prototype using Leap Motion hand tracking evolved into a full AI-powered virtual pet experience. After a six-month pitch period in Los Angeles, Oculus provided a grant for full development over three years, resulting in a commercially released title that gained significant popularity in the VR community.",
+    "role": "Director, Artist, Engineer",
+    "media": [
+      {
+        "type": "image",
+        "src": "assets/projects/waba-3d-pet.gif",
+        "alt": "Waba 3D Pet Animation"
+      }
+    ],
+    "links": [
+      { "label": "Steam", "url": "https://store.steampowered.com/app/418940/Waba/" },
+      { "label": "Official Site", "url": "https://waba.pet" }
+    ],
+    "credits": [
+      { "role": "Director, Artist, Engineer", "name": "Edwon" },
+      { "role": "Music", "name": "Macoubre" },
+      { "role": "Animator", "name": "Tahnee Gehm" },
+      { "role": "Lead Engineer", "name": "Evan Hemsley" }
+    ],
+    "tools": "Unity, Oculus SDK, Leap Motion"
+  },
+  {
+    "id": "vr-infinite-gesture",
+    "title": "VR Infinite Gesture",
+    "category": "VR Developer Tool",
+    "year": "2017",
+    "client": "",
+    "thumbnail": "assets/projects/vr-infinite-gesture.gif",
+    "thumbnailAlt": "VR Infinite Gesture",
+    "description": "A developer tool for creating infinite gesture libraries in VR environments, enabling more natural and expressive hand interactions.",
+    "role": "Director, Developer",
+    "media": [],
+    "links": [],
+    "credits": [
+      { "role": "Director, Developer", "name": "Edwon" }
+    ],
+    "tools": "Unity, Leap Motion"
+  },
+  {
+    "id": "wuppets",
+    "title": "Wuppets",
+    "category": "AR App",
+    "year": "2019",
+    "client": "",
+    "thumbnail": "assets/projects/wuppets-thumb.jpg",
+    "thumbnailAlt": "Wuppets AR App",
+    "description": "An augmented reality app that brings cute animated puppet characters into the real world through your phone's camera.",
+    "role": "Director, Developer, Artist",
+    "media": [],
+    "links": [],
+    "credits": [
+      { "role": "Director, Developer, Artist", "name": "Edwon" }
+    ],
+    "tools": "Unity, ARKit"
+  },
+  {
+    "id": "collider-trailer",
+    "title": "Collider Trailer",
+    "category": "Game Trailer",
+    "year": "2018",
+    "client": "",
+    "thumbnail": "assets/projects/collider-trailer.gif",
+    "thumbnailAlt": "Collider Trailer",
+    "description": "A cinematic game trailer showcasing high-energy gameplay and world design.",
+    "role": "Director, Editor",
+    "media": [],
+    "links": [],
+    "credits": [
+      { "role": "Director, Editor", "name": "Edwon" }
+    ],
+    "tools": "After Effects, Premiere"
+  },
+  {
+    "id": "museum-of-ice-cream",
+    "title": "Museum of Ice Cream Drawing App",
+    "category": "Museum Installation",
+    "year": "2019",
+    "client": "Museum of Ice Cream",
+    "thumbnail": "assets/projects/moic-thumb.jpg",
+    "thumbnailAlt": "Museum of Ice Cream Drawing App",
+    "description": "An interactive drawing installation built for the Museum of Ice Cream, allowing visitors to create digital art that responded to the museum's playful environment.",
+    "role": "Developer, Director",
+    "media": [],
+    "links": [
+      { "label": "Museum of Ice Cream", "url": "https://www.museumoficecream.com" }
+    ],
+    "credits": [
+      { "role": "Developer, Director", "name": "Edwon" }
+    ],
+    "tools": "Unity"
+  },
+  {
+    "id": "snapchat-cat-lens",
+    "title": "Snapchat Cat Lens",
+    "category": "AR Filter",
+    "year": "2020",
+    "client": "Snapchat",
+    "thumbnail": "assets/projects/snapchat-cat-lens.gif",
+    "thumbnailAlt": "Snapchat Cat Lens",
+    "description": "An AR face filter for Snapchat featuring an animated cat character with physics-based interactions and facial tracking.",
+    "role": "Artist, Developer",
+    "media": [],
+    "links": [],
+    "credits": [
+      { "role": "Artist, Developer", "name": "Edwon" }
+    ],
+    "tools": "Lens Studio"
+  },
+  {
+    "id": "wuboz",
+    "title": "Wuboz",
+    "category": "NFT Collection",
+    "year": "2022",
+    "client": "",
+    "thumbnail": "assets/projects/wuboz.gif",
+    "thumbnailAlt": "Wuboz NFT Collection",
+    "description": "A collection of unique animated NFT characters available on Foundation and FxHash, each with distinct personalities and visual styles.",
+    "role": "Artist, Creator",
+    "media": [],
+    "links": [
+      { "label": "Foundation", "url": "https://foundation.app/@edwon" },
+      { "label": "FxHash", "url": "https://www.fxhash.xyz/u/edwon" }
+    ],
+    "credits": [
+      { "role": "Artist, Creator", "name": "Edwon" }
+    ],
+    "tools": "Blender, Procreate"
+  },
+  {
+    "id": "disneyworld-minetrain",
+    "title": "Disneyworld's Seven Dwarfs Minetrain",
+    "category": "Theme Park Installation",
+    "year": "2014",
+    "client": "Disney",
+    "thumbnail": "assets/projects/disneyworld.gif",
+    "thumbnailAlt": "Disneyworld Seven Dwarfs Minetrain",
+    "description": "An interactive installation created for Disneyworld's Seven Dwarfs Mine Train attraction, bringing the beloved characters to life through digital art and animation.",
+    "role": "Artist, Animator",
+    "media": [],
+    "links": [],
+    "credits": [
+      { "role": "Artist, Animator", "name": "Edwon" }
+    ],
+    "tools": "Cinema 4D, After Effects"
+  },
+  {
+    "id": "song-of-the-salaryman",
+    "title": "Song of the Salaryman",
+    "category": "Short Film",
+    "year": "2015",
+    "client": "",
+    "thumbnail": "assets/projects/salaryman.gif",
+    "thumbnailAlt": "Song of the Salaryman",
+    "description": "After relocating to Kyoto, Japan in 2014 to work at a video game company, I experienced firsthand the rigidity of corporate culture. I produced this short film to encourage salarymen globally to reconsider their lifestyle choices.",
+    "role": "Story, Editor, Subject",
+    "media": [],
+    "links": [],
+    "credits": [
+      { "role": "Story, Editor, Subject", "name": "Edwon" },
+      { "role": "Cinematographer, Editor", "name": "Andrew Franks" },
+      { "role": "Supporting Cast", "name": "Ohno" },
+      { "role": "Music", "name": "Pogo" }
+    ],
+    "tools": "Premiere, After Effects"
+  },
+  {
+    "id": "wave-master",
+    "title": "Wave Master",
+    "category": "Game",
+    "year": "2016",
+    "client": "",
+    "thumbnail": "assets/projects/wave-master.gif",
+    "thumbnailAlt": "Wave Master Game",
+    "description": "A gesture-controlled game where players use hand waves to navigate through dynamic obstacles and environments.",
+    "role": "Director, Developer, Artist",
+    "media": [],
+    "links": [],
+    "credits": [
+      { "role": "Director, Developer, Artist", "name": "Edwon" }
+    ],
+    "tools": "Unity, Leap Motion"
+  },
+  {
+    "id": "family-force-5",
+    "title": "Family Force 5 Dance or Die",
+    "category": "Music Video",
+    "year": "2013",
+    "client": "Family Force 5",
+    "thumbnail": "assets/projects/ff5.gif",
+    "thumbnailAlt": "Family Force 5 Dance or Die Music Video",
+    "description": "A high-energy music video for Family Force 5's 'Dance or Die,' featuring dynamic animation and vibrant visual storytelling.",
+    "role": "Director, Animator",
+    "media": [],
+    "links": [],
+    "credits": [
+      { "role": "Director, Animator", "name": "Edwon" }
+    ],
+    "tools": "After Effects, Cinema 4D"
+  },
+  {
+    "id": "microsoft-college",
+    "title": "Microsoft College Campaign",
+    "category": "Web Commercial",
+    "year": "2015",
+    "client": "Microsoft",
+    "thumbnail": "assets/projects/microsoft-college.gif",
+    "thumbnailAlt": "Microsoft College Campaign",
+    "description": "A web commercial campaign for Microsoft targeting college students, featuring dynamic animation and relatable storytelling.",
+    "role": "Director, Animator",
+    "media": [],
+    "links": [],
+    "credits": [
+      { "role": "Director, Animator", "name": "Edwon" }
+    ],
+    "tools": "After Effects, Cinema 4D"
+  },
+  {
+    "id": "parade-master",
+    "title": "Parade Master",
+    "category": "Animation",
+    "year": "2022",
+    "client": "",
+    "thumbnail": "assets/projects/parade-master.gif",
+    "thumbnailAlt": "Parade Master Animation",
+    "description": "An animated short featuring a parade of quirky characters in a bold, colorful world.",
+    "role": "Director, Animator, Artist",
+    "media": [],
+    "links": [],
+    "credits": [
+      { "role": "Director, Animator, Artist", "name": "Edwon" }
+    ],
+    "tools": "Blender, After Effects"
+  },
+  {
+    "id": "microsoft-outlook",
+    "title": "Microsoft Outlook Commercial Concept Art",
+    "category": "TV Commercial",
+    "year": "2014",
+    "client": "Microsoft",
+    "thumbnail": "assets/projects/outlook-thumb.jpg",
+    "thumbnailAlt": "Microsoft Outlook Commercial Concept Art",
+    "description": "Concept art and visual development for a Microsoft Outlook commercial, exploring character design and world-building for the campaign.",
+    "role": "Concept Artist, Art Director",
+    "media": [],
+    "links": [],
+    "credits": [
+      { "role": "Concept Artist, Art Director", "name": "Edwon" }
+    ],
+    "tools": "Photoshop, Illustrator"
+  }
+]

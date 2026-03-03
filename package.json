@@ -1,0 +1,12 @@
+{
+  "name": "edwon-site",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "brunch watch --server",
+    "build": "brunch build --production"
+  },
+  "devDependencies": {
+    "brunch": "^3.0.0"
+  }
+}
