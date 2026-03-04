@@ -8,6 +8,7 @@ module.exports = {
     stylesheets: { joinTo: '_unused.css' }
   },
   server: {
-    port: 3333
+    port: 3333,
+    noPushState: true
   }
 };
