@@ -1,38 +1,65 @@
 (function () {
+  'use strict';
 
-  // ── Category Filter ─────────────────────────────────────────────
-  // Finsweet reads radio `value` attributes ("Radio") to match items,
-  // but the Webflow export sets all values to the placeholder "Radio".
-  // We handle filtering ourselves using the visible label text instead.
+  var FILTER_KEY = 'edwon_filter';
+  var SCROLL_KEY = 'edwon_scroll';
+
+  // ── Category Filter ────────────────────────────────────────────────────────
+
   document.addEventListener('DOMContentLoaded', function () {
-    var list = document.querySelector('[fs-cmsfilter-element="list"]');
+    var list     = document.querySelector('[fs-cmsfilter-element="list"]');
     var resetBtn = document.querySelector('[fs-cmsfilter-element="reset"]');
-    var filterBtns = document.querySelectorAll(
-      '[fs-cmsfilter-element="filters"] [fs-cmsfilter-field="Category"]'
+    // Attach to labels so the full click area (radio circle + text) works
+    var filterLabels = document.querySelectorAll(
+      '[fs-cmsfilter-element="filters"] .category-radio-buttons-container'
     );
 
-    if (!list || !filterBtns.length) return;
+    if (!list || !filterLabels.length) return;
 
     var items = list.querySelectorAll('.works-collection-item');
 
+    function itemCategories(item) {
+      var cats = [];
+      item.querySelectorAll('[fs-cmsfilter-field="Category"]').forEach(function (el) {
+        var t = el.textContent.trim();
+        if (t) cats.push(t);
+      });
+      return cats;
+    }
+
+    function setActive(category) {
+      filterLabels.forEach(function (label) {
+        var span = label.querySelector('[fs-cmsfilter-field="Category"]');
+        var dot  = label.querySelector('.category-radio-button');
+        if (dot) dot.classList.toggle('w--redirected-checked', !!(span && span.textContent.trim() === category));
+      });
+    }
+
     function showAll() {
       items.forEach(function (item) { item.style.display = ''; });
+      setActive(null);
+      try { sessionStorage.removeItem(FILTER_KEY); } catch (e) {}
     }
 
     function filterBy(category) {
       items.forEach(function (item) {
-        var catEls = item.querySelectorAll('[fs-cmsfilter-field="Category"]');
-        var match = false;
-        catEls.forEach(function (el) {
-          if (el.textContent.trim() === category) match = true;
-        });
-        item.style.display = match ? '' : 'none';
+        item.style.display = itemCategories(item).indexOf(category) !== -1 ? '' : 'none';
       });
+      setActive(category);
+      try { sessionStorage.setItem(FILTER_KEY, category); } catch (e) {}
     }
 
-    filterBtns.forEach(function (btn) {
-      btn.addEventListener('click', function () {
-        filterBy(btn.textContent.trim());
+    // Click on label (whole area: radio circle + text)
+    filterLabels.forEach(function (label) {
+      label.addEventListener('click', function (e) {
+        e.preventDefault();
+        var span = label.querySelector('[fs-cmsfilter-field="Category"]');
+        var cat  = span ? span.textContent.trim() : null;
+        if (!cat) return;
+        var current;
+        try { current = sessionStorage.getItem(FILTER_KEY); } catch (e) {}
+        // Toggle off if clicking the already-active filter
+        current === cat ? showAll() : filterBy(cat);
       });
     });
 
@@ -42,11 +69,34 @@
         showAll();
       });
     }
+
+    // ── Restore filter from sessionStorage (persists across bfcache reload) ──
+
+    var savedFilter;
+    try { savedFilter = sessionStorage.getItem(FILTER_KEY); } catch (e) {}
+    if (savedFilter) filterBy(savedFilter);
+
+    // ── Restore scroll position ───────────────────────────────────────────────
+
+    var savedScroll;
+    try { savedScroll = sessionStorage.getItem(SCROLL_KEY); } catch (e) {}
+    if (savedScroll) {
+      requestAnimationFrame(function () {
+        window.scrollTo(0, parseInt(savedScroll, 10) || 0);
+      });
+      try { sessionStorage.removeItem(SCROLL_KEY); } catch (e) {}
+    }
+
+    // Save scroll position before leaving the page
+    window.addEventListener('beforeunload', function () {
+      try { sessionStorage.setItem(SCROLL_KEY, String(window.scrollY || 0)); } catch (e) {}
+    });
   });
 
-  // ── Hover Overlay Reset ─────────────────────────────────────────
-  // Force a fresh load on back navigation so Webflow hover state
-  // is always clean.
+  // ── Hover Overlay Reset ────────────────────────────────────────────────────
+  // Webflow JS-driven hover states can get stuck when the page is restored
+  // from the browser's back-forward cache. Reloading resets them cleanly.
+  // sessionStorage survives a same-tab reload, so filter + scroll restore above.
   window.addEventListener('pageshow', function (e) {
     if (e.persisted) window.location.reload();
   });
