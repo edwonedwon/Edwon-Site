@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="675" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0E1320"/>
+      <stop offset="0.52" stop-color="#1E2A46"/>
+      <stop offset="1" stop-color="#4A2D1A"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="250" y1="180" x2="950" y2="500" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F8C66A" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#F8C66A" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg)"/>
+  <rect x="140" y="120" width="920" height="435" rx="18" fill="url(#glow)"/>
+  <rect x="170" y="150" width="860" height="375" rx="14" fill="#0B0F1A" fill-opacity="0.65" stroke="#F8C66A" stroke-opacity="0.45"/>
+  <text x="600" y="286" text-anchor="middle" fill="#F8C66A" font-family="Poppins, Arial, sans-serif" font-size="78" font-weight="700" letter-spacing="4">MY OYAJI</text>
+  <text x="600" y="338" text-anchor="middle" fill="#D7DCE6" font-family="Open Sans, Arial, sans-serif" font-size="26" letter-spacing="5">FEATURE FILM</text>
+  <text x="600" y="388" text-anchor="middle" fill="#AAB2C3" font-family="Open Sans, Arial, sans-serif" font-size="20" letter-spacing="3">IN PROGRESS</text>
+</svg>
