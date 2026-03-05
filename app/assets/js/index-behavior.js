@@ -94,18 +94,14 @@
   });
 
   // ── Hover Overlay Reset ────────────────────────────────────────────────────
-  // Webflow JS sets inline opacity/transform on hover. When the browser
-  // restores the page from bfcache (e.persisted), those inline styles are
-  // frozen in place. Clear them directly — no reload needed, no flash.
+  // On bfcache restore, Webflow IX2's internal state machine still thinks
+  // elements are "hovered". Re-initialising IX2 resets both the inline styles
+  // and the state machine so the first hover works correctly again.
   window.addEventListener('pageshow', function (e) {
     if (!e.persisted) return;
-    document.querySelectorAll(
-      '.works-collection-item [data-w-id], .works-hover-info'
-    ).forEach(function (el) {
-      el.style.opacity = '';
-      el.style.transform = '';
-      el.style.willChange = '';
-    });
+    try {
+      window.Webflow.require('ix2').init();
+    } catch (err) {}
   });
 
 }());
