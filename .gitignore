@@ -9,8 +9,7 @@ npm-shrinkwrap.json
 .pnpm-store/
 .yarn/
 
-# Brunch config + caches
-brunch-config.js
+# Brunch caches
 .brunch/
 .cache/
 
