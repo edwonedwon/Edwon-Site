@@ -93,15 +93,5 @@
     });
   });
 
-  // ── Hover Overlay Reset ────────────────────────────────────────────────────
-  // On bfcache restore, Webflow IX2's internal state machine still thinks
-  // elements are "hovered". Re-initialising IX2 resets both the inline styles
-  // and the state machine so the first hover works correctly again.
-  window.addEventListener('pageshow', function (e) {
-    if (!e.persisted) return;
-    try {
-      window.Webflow.require('ix2').init();
-    } catch (err) {}
-  });
 
 }());
