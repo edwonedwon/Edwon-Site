@@ -1,12 +1,21 @@
 # Dependencies
 node_modules/
 
-# Build output (Brunch)
-public/
+# Package managers / local tooling
+package.json
+package-lock.json
+npm-shrinkwrap.json
+.npm/
+.pnpm-store/
+.yarn/
 
-# Brunch and bundler caches
+# Brunch config + caches
+brunch-config.js
 .brunch/
 .cache/
+
+# Build output
+public/
 
 # Logs
 *.log
