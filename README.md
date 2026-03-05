@@ -1,6 +1,6 @@
-# EdwonSite Mirror
+# Edwon-Site
 
-This project is a local mirror/recreation of `https://www.edwon.tv` (focused on creations + work pages), built with Brunch static assets.
+The source code for `https://www.edwon.tv` aka Edwon's portfolio website. You need to build using brunch build before uplaoding, which is setup using the npm commands below.
 
 ## Quick Start
 
