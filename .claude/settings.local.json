@@ -5,7 +5,11 @@
       "Bash(chmod +x:*)",
       "Bash(npm install:*)",
       "Bash(npx brunch:*)",
-      "Bash(ls:*)"
+      "Bash(ls:*)",
+      "Bash(pdftoppm:*)",
+      "Bash(python3:*)",
+      "Bash(pip3 install:*)",
+      "Bash(git:*)"
     ]
   }
 }

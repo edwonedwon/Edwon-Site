@@ -37,3 +37,6 @@ Thumbs.db
 
 # Misc local tooling
 .snapshot/
+
+# Temp Folder
+Tmp/
