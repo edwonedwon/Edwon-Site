@@ -8,68 +8,116 @@
   <link href="/mirror/cdn.prod.website-files.com/5ff174245233458a595eefe3/5ff4282c231a567825afa3b1_edwon%20favicon%201.0%2032.png" rel="shortcut icon" type="image/x-icon"/>
   <link href="/mirror/cdn.prod.website-files.com/5ff174245233458a595eefe3/5ff4282fc9234ab421e84e3d_edwon%20favicon%201.0%20256.png" rel="apple-touch-icon"/>
   <style>
-    .my-oyaji-hero {
-      position: relative;
-      border-radius: 18px;
-      padding: 36px;
+    .oyaji-clash {
+      display: grid;
+      grid-template-columns: 1fr 56px 1fr;
+      gap: 0;
+      margin: 32px 0;
+      border-radius: 14px;
       overflow: hidden;
-      border: 1px solid rgba(248, 198, 106, 0.4);
-      background: radial-gradient(circle at 20% 20%, rgba(248, 198, 106, 0.22), transparent 38%), linear-gradient(140deg, #0d1322 0%, #18253f 45%, #40291c 100%);
-      color: #f5f7fb;
+      font-size: 14px;
+      line-height: 1.55;
     }
-    .my-oyaji-badge {
-      display: inline-block;
-      margin-bottom: 16px;
-      padding: 6px 12px;
-      border-radius: 999px;
-      background: rgba(248, 198, 106, 0.18);
-      border: 1px solid rgba(248, 198, 106, 0.35);
+    .oyaji-clash-side {
+      padding: 24px 22px;
+    }
+    .oyaji-clash-side.weeb {
+      background: #1a2133;
+      border: 1px solid rgba(120, 160, 255, 0.25);
+      border-right: none;
+      border-radius: 14px 0 0 14px;
+    }
+    .oyaji-clash-side.oyaji {
+      background: #1e1610;
+      border: 1px solid rgba(230, 170, 80, 0.28);
+      border-left: none;
+      border-radius: 0 14px 14px 0;
+    }
+    .oyaji-clash-vs {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      color: #fff;
+      background: #111;
+      border-top: 1px solid #222;
+      border-bottom: 1px solid #222;
+    }
+    .oyaji-clash-label {
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      opacity: 0.5;
+      margin-bottom: 6px;
+    }
+    .oyaji-clash-name {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+    .oyaji-clash-side.weeb .oyaji-clash-name { color: #8ab0ff; }
+    .oyaji-clash-side.oyaji .oyaji-clash-name { color: #e6aa50; }
+    .oyaji-clash-quote {
+      font-style: italic;
+      opacity: 0.75;
+      margin: 10px 0 0;
+      font-size: 13px;
+    }
+    .oyaji-tone {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin: 28px 0;
+    }
+    .oyaji-tone-item {
+      padding: 18px 16px;
+      border-radius: 10px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.09);
+      font-size: 13px;
+      line-height: 1.5;
+    }
+    .oyaji-tone-item strong {
+      display: block;
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      opacity: 0.45;
+      margin-bottom: 6px;
+      font-weight: 600;
+    }
+    .oyaji-status {
+      display: flex;
+      align-items: center;
+      gap: 8px;
       font-size: 12px;
       letter-spacing: 0.08em;
       text-transform: uppercase;
+      opacity: 0.55;
+      margin-top: 32px;
     }
-    .my-oyaji-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 16px;
-      margin-top: 20px;
+    .oyaji-status-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #e6aa50;
+      animation: oyaji-pulse 2s ease-in-out infinite;
     }
-    .my-oyaji-card {
-      border-radius: 14px;
-      padding: 18px;
-      background: rgba(5, 7, 12, 0.45);
-      border: 1px solid rgba(255, 255, 255, 0.12);
-    }
-    .my-oyaji-card h3 {
-      margin: 0 0 8px;
-      font-size: 16px;
-      color: #f8c66a;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-    }
-    .my-oyaji-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 20px;
-    }
-    .my-oyaji-action {
-      display: inline-block;
-      border-radius: 999px;
-      padding: 10px 14px;
-      font-size: 13px;
-      text-decoration: none;
-      background: rgba(248, 198, 106, 0.14);
-      border: 1px solid rgba(248, 198, 106, 0.4);
-      color: #f8d894;
+    @keyframes oyaji-pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
     }
     @media (max-width: 767px) {
-      .my-oyaji-hero {
-        padding: 22px;
-      }
-      .my-oyaji-grid {
+      .oyaji-clash {
         grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
       }
+      .oyaji-clash-side.weeb { border-right: 1px solid rgba(120,160,255,0.25); border-bottom: none; border-radius: 14px 14px 0 0; }
+      .oyaji-clash-side.oyaji { border-left: 1px solid rgba(230,170,80,0.28); border-top: none; border-radius: 0 0 14px 14px; }
+      .oyaji-clash-vs { padding: 12px; border: none; border-left: 1px solid #222; border-right: 1px solid #222; }
+      .oyaji-tone { grid-template-columns: 1fr; }
     }
   </style>
 <style>.work-main{overflow-x:hidden;}.work-main .w-video,.work-main .w-embed,.work-main .description,.work-main .w-richtext,.work-main figure,.work-main img,.work-main iframe{max-width:100%;}.work-main iframe{width:100%;}</style></head>
@@ -90,48 +138,27 @@
 
   <div>
     <div class="work-main">
-      <div class="work-name">My Oyaji</div>
-      <div class="work-type">Feature Film (in progress)</div>
+      <div class="work-name">My Oyaji <span style="font-size:0.6em;opacity:0.55;letter-spacing:0.04em;">マイオヤジ</span></div>
+      <div class="work-type">Feature Film - In Pre-Production</div>
       <div class="spacer-20px"></div>
       <img src="/assets/projects/my-oyaji-cover.png" alt="My Oyaji" loading="eager" style="border-radius:18px;"/>
       <div class="spacer-20px"></div>
-
-      <section class="my-oyaji-hero">
-        <div class="my-oyaji-badge">In Development</div>
-        <h2 style="margin:0 0 10px;font-size:32px;line-height:1.2;">A generational story about identity, distance, and repair.</h2>
-        <p style="margin:0;color:#e7ebf5;max-width:760px;">This page is a working outline for the upcoming film. It is structured to match the rest of the portfolio while keeping unreleased details private.</p>
-
-        <div class="my-oyaji-grid">
-          <article class="my-oyaji-card">
-            <h3>Logline</h3>
-            <p>An emotionally grounded family drama that follows a son confronting unresolved history with his father while navigating the push and pull between cultures, duty, and self-expression.</p>
-          </article>
-          <article class="my-oyaji-card">
-            <h3>Visual Direction</h3>
-            <p>Intimate framing, textured real-world locations, and stylized memory transitions. The look balances realism with poetic visual beats to emphasize emotional perspective.</p>
-          </article>
-          <article class="my-oyaji-card">
-            <h3>Themes</h3>
-            <p>Father-son distance, inherited expectations, diaspora identity, vulnerability, and the difficult work of reconciliation.</p>
-          </article>
-          <article class="my-oyaji-card">
-            <h3>Status</h3>
-            <p>Story and development are in progress. Deck, look references, and production planning are active. Public teaser assets will be posted here when ready.</p>
-          </article>
-        </div>
-
-        <div class="my-oyaji-actions">
-          <span class="my-oyaji-action">Teaser: Coming Soon</span>
-          <span class="my-oyaji-action">Full Deck: Private</span>
-          <span class="my-oyaji-action">Release Window: TBA</span>
-        </div>
-      </section>
-
-      <div class="spacer-20px"></div>
       <div class="description w-richtext">
-        <p><sub>Creator / Writer / Director: Edwon</sub></p>
-        <p><sub>Additional credits and media will be added as production progresses.</sub></p>
-        <p><sub>Cast details are intentionally withheld until official announcement.</sub></p>
+        <p>A cross-cultural buddy comedy.</p>
+
+        <p>The only way out, is through each other.</p>
+          
+        <p>Two men who despise each other get stuck on a cycling trip through the Japanese countryside.</p>
+        <div class="oyaji-status">
+          <div class="oyaji-status-dot"></div>
+        filming in October 2026 in Japan.
+        </div>
+
+        <h5>Credits</h5>
+        <p>Director: Edwon</p>
+        <p>Screenplay: Edwon, Motoko Millum, Natalie DeRossa, Taiga Kobayashi</p>
+        <p><sub>Cast and additional credits will be announced publicly when production begins.</sub></p>
+
       </div>
     </div>
   </div>
