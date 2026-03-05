@@ -94,11 +94,18 @@
   });
 
   // ── Hover Overlay Reset ────────────────────────────────────────────────────
-  // Webflow JS-driven hover states can get stuck when the page is restored
-  // from the browser's back-forward cache. Reloading resets them cleanly.
-  // sessionStorage survives a same-tab reload, so filter + scroll restore above.
+  // Webflow JS sets inline opacity/transform on hover. When the browser
+  // restores the page from bfcache (e.persisted), those inline styles are
+  // frozen in place. Clear them directly — no reload needed, no flash.
   window.addEventListener('pageshow', function (e) {
-    if (e.persisted) window.location.reload();
+    if (!e.persisted) return;
+    document.querySelectorAll(
+      '.works-collection-item [data-w-id], .works-hover-info'
+    ).forEach(function (el) {
+      el.style.opacity = '';
+      el.style.transform = '';
+      el.style.willChange = '';
+    });
   });
 
 }());
